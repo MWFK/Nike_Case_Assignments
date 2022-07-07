@@ -30,4 +30,13 @@ WHERE e.officeCode = o.officeCode
 GROUP BY o.territory
 ORDER BY nbr_emp_territory DESC;
 
+-- 6. Write an SQL query to print “productName” from “products” table next to the corresponding “textDescription” with alias “productLine” from the “productlines” table order by “productLine” Ascending and “productName” Descending.
+
+SELECT p.productName, l.textDescription AS productLine 
+FROM products p 
+LEFT JOIN productlines l 
+ON p.productLine = l.productLine 
+ORDER BY productLine ASC, p.productName DESC;
+
+-- 7. Write an SQL query to print top 5 products with highest total quantity sold in April, 2005. Quantities should also be displayed.
 
