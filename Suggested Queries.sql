@@ -49,5 +49,8 @@ DESC LIMIT 3;
 
 -- 8. Write an SQL query to print total revenue (calculated as “quantityOrdered” * “priceEach”) along with product names for all products in the database, including those where no sales were registered (display revenue as 0 in such cases).
 
-SELECT p.productName, d.quantityOrdered * d.priceEach FROM products p, orderdetails d WHERE p.productCode = d.productCode; 
+SELECT p.productName ,d.quantityOrdered * d.priceEach
+FROM products p, orderdetails d
+WHERE p.productCode = d.productCode
+GROUP BY p.productName;
 
