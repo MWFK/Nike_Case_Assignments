@@ -40,3 +40,9 @@ ORDER BY productLine ASC, p.productName DESC;
 
 -- 7. Write an SQL query to print top 5 products with highest total quantity sold in April, 2005. Quantities should also be displayed.
 
+SELECT p.productName, p.productCode, d.quantityOrdered 
+FROM products p, orderdetails d, orders o 
+WHERE p.productCode = d.productCode AND d.orderNumber = o.orderNumber 
+                                    AND o.orderDate BETWEEN '2005-04-01' AND '2005-04-30' 
+ORDER BY d.quantityOrdered 
+DESC LIMIT 3; 
