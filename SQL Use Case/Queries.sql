@@ -52,7 +52,7 @@ ORDER BY d.quantityOrdered
 DESC LIMIT 5; 
 
 -- 8. Write an SQL query to print total revenue (calculated as “quantityOrdered” * “priceEach”) along with product names for all products in the database,
-including those where no sales were registered (display revenue as 0 in such cases).
+-- including those where no sales were registered (display revenue as 0 in such cases).
 
 SELECT p.productName,
 ISNULL(d.quantityOrdered * d.priceEach, 0) AS Total_Revenue
