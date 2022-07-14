@@ -31,7 +31,7 @@ GROUP BY o.territory
 ORDER BY nbr_emp_territory DESC;
 
 -- 6. Write an SQL query to print “productName” from “products” table next to the corresponding “textDescription” 
-with alias “productLine” from the “productlines” table order by “productLine” Ascending and “productName” Descending.
+-- with alias “productLine” from the “productlines” table order by “productLine” Ascending and “productName” Descending.
 
 SELECT p.productName, l.textDescription AS productLine 
 FROM products AS p 
